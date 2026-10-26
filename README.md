@@ -10,10 +10,10 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-0.1-27694b?labelColor=30363d&amp;style=flat" alt="Version 0.1">
-  <img src="https://img.shields.io/badge/status-experimental-27694b?labelColor=30363d&amp;style=flat" alt="Experimental build">
-  <img src="https://img.shields.io/badge/platform-macOS%20%C2%B7%20Apple%20Silicon-27694b?labelColor=30363d&amp;style=flat" alt="macOS, Apple Silicon">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-27694b?labelColor=30363d&amp;style=flat" alt="GPL-3.0 license"></a>
+  <img src="docs/assets/badge-version.svg" alt="Version 0.1">
+  <img src="docs/assets/badge-status.svg" alt="Experimental build">
+  <img src="docs/assets/badge-platform.svg" alt="macOS, Apple Silicon">
+  <a href="LICENSE"><img src="docs/assets/badge-license.svg" alt="GPL-3.0 license"></a>
 </p>
 
 <p align="center">
