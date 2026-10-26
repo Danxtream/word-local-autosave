@@ -1,10 +1,36 @@
-# Local AutoSave
+<p align="center">
+  <img src="docs/assets/app-icon.svg" width="112" height="112" alt="Local AutoSave app icon">
+</p>
 
-Save an existing local Word document on a timer, using Word's own save API. Local AutoSave is an experimental add-in for Microsoft Word on Apple Silicon Macs.
+<h1 align="center">Local AutoSave</h1>
+
+<p align="center">
+  Timed saving for local Word documents on your Mac.<br>
+  Save to the original file through Word's own API.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-0.1-27694b" alt="Version 0.1">
+  <img src="https://img.shields.io/badge/status-experimental-d49a35" alt="Experimental build">
+  <img src="https://img.shields.io/badge/platform-macOS%20%C2%B7%20Apple%20Silicon-555555" alt="macOS, Apple Silicon">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-27694b" alt="GPL-3.0 license"></a>
+</p>
+
+<p align="center">
+  <a href="#get-started">Get started</a> ·
+  <a href="#what-it-does">Features</a> ·
+  <a href="#build-from-source">Build</a> ·
+  <a href="#testing-and-known-limits">Testing</a> ·
+  <a href="CONTRIBUTING.md">Contributing</a> ·
+  <a href="SECURITY.md">Security</a> ·
+  <a href="https://danxtream.gumroad.com/coffee">Support</a>
+</p>
 
 **Status: personal test build, v0.1.** Automated checks cover the scheduler and local infrastructure. Scheduled writes to real documents, operation with the task pane closed, and background saving still need live validation. Use disposable documents while testing and keep saving important work manually.
 
-[Build from source](#build-from-source) · [Test guide](web/help.html) · [Support development](https://danxtream.gumroad.com/coffee)
+## Get started
+
+This is a source-build preview, with no public release download linked yet. Start with [Build from source](#build-from-source), then follow [Set up and test](#set-up-and-test) using a disposable document. The [full test guide](web/help.html) covers setup, certificate approval, live checks and removal.
 
 ## What it does
 
@@ -89,6 +115,14 @@ See [TEST-RESULTS.txt](TEST-RESULTS.txt) and [ENGINEERING-REVIEW.txt](ENGINEERIN
 | `manifest.xml` | Word add-in registration and shared runtime |
 | `macos/` | Native launcher/watcher, local server, certificates and build scripts |
 | `tests/` | Automated behavior and infrastructure checks |
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development requirements, useful bug reports and the distinction between automated tests and live Word validation. Installation and certificate setup can be improved without changing the saving behavior.
+
+## Security
+
+See [SECURITY.md](SECURITY.md) for the trust model, sensitive files and vulnerability reporting. Do not include documents, certificate private keys or private logs in public reports.
 
 ## License and project status
 
