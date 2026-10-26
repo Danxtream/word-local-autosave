@@ -36,4 +36,4 @@ Keep your own development notes and tests free of personal documents, secrets an
 
 If you choose to submit a change, keep it focused and include applicable test results; review or acceptance is not promised. Describe any new permissions, network destinations, background processes or installation steps. Preserve third-party attribution and avoid committing generated builds, private keys or machine-specific configuration.
 
-Optional security reporting is described in [SECURITY.md](SECURITY.md). No response, investigation or fix is promised.
+The [README security summary](README.md#security) explains the local permissions and certificate risks.

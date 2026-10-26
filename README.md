@@ -22,7 +22,7 @@
   <a href="#build-from-source">Build</a> ·
   <a href="#testing-and-known-limits">Testing</a> ·
   <a href="CONTRIBUTING.md">Contributing</a> ·
-  <a href="SECURITY.md">Security</a> ·
+  <a href="#security">Security</a> ·
   <a href="https://danxtream.gumroad.com/coffee">Donate</a>
 </p>
 
@@ -122,7 +122,9 @@ The source is available for others to inspect, build and adapt. See [CONTRIBUTIN
 
 ## Security
 
-See [SECURITY.md](SECURITY.md) for the trust model and optional security reporting. I do not promise to acknowledge, investigate or fix reports. Do not post documents, private keys or sensitive vulnerability details publicly.
+Local AutoSave has not received an independent security audit. It requests write access to the current Word document and installs a local HTTPS certificate and background watcher. Its helper serves static assets on loopback only; the saving code does not upload document contents or add telemetry. Office.js still loads from Microsoft's CDN.
+
+Keep the local certificate private keys private. The approximately 100-year local signing certificate is a personal-use tradeoff: a stolen key remains relevant while its trust is installed. Remove that trust if the key is exposed; deleting a copy of the key is not enough. See [Permissions and data](#permissions-and-data) and the test guide's removal steps for details.
 
 ## License and project status
 
