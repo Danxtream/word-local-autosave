@@ -22,7 +22,7 @@
   <a href="#usage">Usage</a> ·
   <a href="#limitations">Limitations</a> ·
   <a href="#development">Development</a> ·
-  <a href="#donate">Donate</a>
+  <a href="https://danxtream.gumroad.com/coffee">Donate</a>
 </p>
 
 ## Overview
