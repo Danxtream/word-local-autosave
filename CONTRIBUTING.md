@@ -10,7 +10,7 @@ The project uses the [GPL-3.0-only license](LICENSE). Submit only code you have 
 
 ## Development setup
 
-The native build requires Apple Silicon, Apple's command-line tools, and Python 3. The current script explicitly selects the MacOSX26.5 SDK. Review [the build instructions](README.md#build-from-source) before running it on a different development environment. Node.js is needed for JavaScript tests.
+The native build requires Apple Silicon, Apple's command-line tools, and Python 3. The current script explicitly selects the MacOSX26.5 SDK. Review [the build instructions](README.md#installation) before running it on a different development environment. Node.js is needed for JavaScript tests.
 
 The private harness used by the maintainer is not required to build or test this project.
 
@@ -36,4 +36,4 @@ Keep your own development notes and tests free of personal documents, secrets an
 
 If you choose to submit a change, keep it focused and include applicable test results; review or acceptance is not promised. Describe any new permissions, network destinations, background processes or installation steps. Preserve third-party attribution and avoid committing generated builds, private keys or machine-specific configuration.
 
-The [README security summary](README.md#security) explains the local permissions and certificate risks.
+The [README security summary](README.md#security-and-privacy) explains the local permissions and certificate risks.
