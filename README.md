@@ -99,6 +99,12 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for build/test commands. Node.js is neede
 
 See [TEST-RESULTS.txt](TEST-RESULTS.txt) and [ENGINEERING-REVIEW.txt](ENGINEERING-REVIEW.txt) for the recorded results and remaining checks.
 
+## Planned features (no timeline)
+
+- A button to save a separate, versioned copy of a document.
+
+Plans may change; no release date is promised.
+
 ## Maintenance
 
 This is a personal project developed with AI assistance and shared for others who find it useful. The software is provided as-is. I do not promise technical support, bug fixes, new features or ongoing maintenance. I update it at my discretion, when I consider it worthwhile; there is no release schedule. Donations do not create any entitlement to support or updates.
