@@ -6,7 +6,7 @@ Local AutoSave is an experimental Word for Mac add-in. Useful contributions impr
 
 Read the [README](README.md), [test results](TEST-RESULTS.txt), and [engineering review](ENGINEERING-REVIEW.txt). They distinguish automated coverage from behavior that has not been verified inside Word.
 
-The project uses the [GPL-3.0-only license](LICENSE); see [NOTICE.md](NOTICE.md). Before submitting code for incorporation, discuss the intended change with the maintainer.
+The project uses the [GPL-3.0-only license](LICENSE). Submit only code you have the right to contribute and identify third-party code with its source and license. Unless explicitly stated otherwise, contributions submitted for incorporation are provided under the project's GPL-3.0-only license.
 
 ## Development setup
 

@@ -23,7 +23,7 @@
   <a href="#testing-and-known-limits">Testing</a> ·
   <a href="CONTRIBUTING.md">Contributing</a> ·
   <a href="SECURITY.md">Security</a> ·
-  <a href="https://danxtream.gumroad.com/coffee">Support</a>
+  <a href="https://danxtream.gumroad.com/coffee">Donate</a>
 </p>
 
 **Status: personal test build, v0.1.** Automated checks cover the scheduler and local infrastructure. Scheduled writes to real documents, operation with the task pane closed, and background saving still need live validation. Use disposable documents while testing and keep saving important work manually.
@@ -126,10 +126,10 @@ See [SECURITY.md](SECURITY.md) for the trust model, sensitive files and vulnerab
 
 ## License and project status
 
-Local AutoSave is licensed under the [GNU General Public License, version 3 only](LICENSE) (GPL-3.0-only); see [NOTICE.md](NOTICE.md). This README previews the planned project page.
+Local AutoSave is licensed under the [GNU General Public License, version 3 only](LICENSE) (GPL-3.0-only); see [NOTICE.md](NOTICE.md). Third-party components and Microsoft services retain their own terms.
 
 Local AutoSave is independently developed and is not affiliated with or endorsed by Microsoft. Users need their own licensed Word installation.
 
-## Support development
+## Donate
 
-If this project is useful to you, you can [leave an optional contribution on Gumroad](https://danxtream.gumroad.com/coffee). Contributions support development and do not purchase support, a release date, or promised features.
+If this project is useful to you, you can [make an optional donation on Gumroad](https://danxtream.gumroad.com/coffee). Donations help fund development. They do not purchase technical support, a release date, or promised features.
