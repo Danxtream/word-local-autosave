@@ -1,0 +1,12 @@
+Local AutoSave - future update notes
+Recorded October 25, 2026
+
+Unsaved-document guidance (requested; not implemented yet)
+When a document has not been saved to a local file, show an expected setup
+state instead of an Error status.
+
+Status: Save document first
+Message: Save this document to your preferred folder on your Mac, then turn on AutoSave.
+
+Keep AutoSave off until the user saves an eligible local .docx file and enables
+it. Genuine save failures must still use an Error status.

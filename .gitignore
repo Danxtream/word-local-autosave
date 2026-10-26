@@ -1,0 +1,17 @@
+# Local development files and packaged builds
+.local/
+*.app/
+*.zip
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+
+# Machine-generated TLS material
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx

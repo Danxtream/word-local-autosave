@@ -1,0 +1,92 @@
+Local AutoSave — engineering review, October 24, 2026
+
+Outcome
+The implementation is a structured, tested local prototype. This review found
+and fixed concrete reliability and efficiency issues. It is not a production
+certification, independent security audit, or measured battery-life guarantee.
+
+Certificate renewal
+- One-time user-approved signing certificate, generated on this Mac only.
+- Keychain trust request is per-user, SSL-only, hostname localhost; no admin
+  trust store, expired-certificate exceptions, or browser warning bypass.
+- Critical DNS name constraint restricts issued DNS names to localhost.
+- Private keys have owner-only permissions; the PKI directory is mode 0700.
+- 825-day server certificates renew 30 days early. The watcher checks on startup
+  and at most daily; daily maintenance has one-hour timer tolerance.
+- Certificate/key pairs are validated, then published through an atomic symlink.
+  Current and previous generations are retained; older keys are removed.
+- File locking prevents concurrent setup/renewal writers. A failed signing
+  operation does not replace the current pair. Cancellation keeps legacy mode.
+- Background code never changes keychain trust. The signing certificate lasts
+  approximately 100 years; replacing its trust later requires another user approval.
+- The full process test renewed a one-day test certificate before serving real
+  CA-verified HTTPS. No machine trust was changed by automated testing.
+
+Efficiency changes
+- No Word-process polling in normal use: native lifecycle notifications drive
+  server start/stop. Synthetic polling is confined to the test mode.
+- Server runs only while Word is open. Its idle shutdown-flag polling interval
+  increased from 0.5 seconds to 30 seconds; signals still stop it promptly.
+- Closed/hidden panes suppress interface work. Diagnostics are serialized only
+  when expanded and visible. Identical UI values are not written repeatedly.
+- The visible-pane health watchdog runs every five seconds; hidden panes cancel
+  it. It does not issue Word API calls.
+- Unchanged documents query Word's saved flag without redundant path queries.
+  Dirty documents revalidate the local destination before saving.
+- One-second stress mode still intentionally checks Word every second. Thirty
+  seconds remains the default. Multiple enabled documents each have a scheduler.
+- No document text, OOXML, image data, or full document scans are used to detect
+  changes. No telemetry, document uploads, or backup writes are introduced.
+
+Reliability/maintenance fixes
+- Safari timer methods retain their Window receiver (previously fixed).
+- Host operations have one per-document lock; save requests cannot overlap.
+- OFF/settings changes queue behind an in-flight save, without reporting a
+  spurious error or interrupting the host operation.
+- Save completion is reported only after context.sync resolves; no physical disk
+  flush guarantee is claimed.
+- Updates stage a complete runtime before stopping the working service, and
+  restore the old runtime/plist if service registration fails. Tested rollback
+  also worked during a transient launchd teardown/bootstrap failure here.
+- Bootstrap retries are bounded and limited to the transient launchd error.
+- Server crash retry is bounded; shutdown intentionally stops its child.
+- Installer limits lifecycle-log growth when updating. Static request logging
+  is disabled; no document contents are logged.
+
+Validation
+- 20 Node scheduler/adapter/UI tests passed.
+- 9 certificate tests passed, including cancelled trust, failure preservation,
+  bounded generations, expiring-root handling, and unrelated-DNS rejection.
+- 2 installer tests passed, including restoring a working prior installation.
+- Process/TLS integration test passed: idle, renewal, start, child-crash recovery,
+  stop, reopen, and watcher shutdown, with synthetic Word lifecycle input.
+- Native launcher/watcher built and ad-hoc signatures verified on this Mac.
+- macOS SSL policy accepted a temporary 825-day leaf under the approximately
+  100-year signing certificate; installed Keychain/Word acceptance still needs
+  the one-time setup step and live check.
+- Existing Microsoft manifest validation remains applicable; manifest unchanged.
+- Updated live helper/server health checked while keeping the existing trusted
+  certificate active. Renewable trust still requires the setup-app action.
+- A short process snapshot showed watcher 0.0% CPU / about 13 MiB RSS and Python
+  server 0.0% CPU / about 16 MiB RSS. This is an idle observation, not a full
+  performance profile, and excludes Word/WebKit and active typing/saving.
+
+Remaining release limits
+- User must approve the one-time renewal trust migration. Live Word acceptance
+  of the renewed chain must then be checked on this Mac.
+- Actual sleep/reboot, inactive-document, pane-close, disk-error, sustained
+  typing, and on-disk content tests are not replaced by mock-host tests.
+- A fast Word startup can request assets before HTTPS is ready; no claim that
+  this startup race is eliminated. Retry the pane and report a failure if seen.
+- The app is locally compiled/ad-hoc signed, not Developer ID signed/notarized.
+  No independent security review or multi-machine compatibility testing yet.
+- Serving still depends on /usr/bin/python3 from this Mac's installed tools;
+  Office.js still comes from Microsoft's official CDN.
+- No version history, crash-time final save, or recovery from unavailable Word
+  APIs is promised. A suspended runtime cannot repaint its own status.
+
+Judgment
+The code now follows sensible separation of responsibilities, bounded work,
+explicit trust, conservative saving, and failure-preserving update patterns.
+It should continue as a disposable-document test build until the remaining live
+checks pass. Those limits should accompany any open-source release or guide.

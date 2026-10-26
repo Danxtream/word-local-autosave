@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Local AutoSave</title><link rel="stylesheet" href="style.css">
+<script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+<script defer src="engine.js"></script><script defer src="office-host.js"></script><script defer src="taskpane.js"></script>
+</head><body>
+<header><span class="eyebrow">WORD FOR MAC · TEST v0.1</span><h1>Local AutoSave</h1><p>Your document. Its original location.</p></header>
+<main>
+<section class="card"><div class="row"><label for="enabled">AutoSave <strong id="onoff">OFF</strong></label><input type="checkbox" id="enabled" role="switch" disabled></div>
+<label class="field" for="interval">Save interval</label>
+<select id="interval" disabled><option value="1">1 second (Test)</option><option value="5">5 seconds</option><option value="10">10 seconds</option><option value="30" selected>30 seconds</option><option value="60">60 seconds</option></select>
+<p class="small">Changing a setting saves this document once, including its current edits.</p></section>
+<section class="card" aria-live="polite"><div class="row"><h2>Status</h2><span id="badge" class="badge">Starting</span></div>
+<p id="message">Connecting to Word…</p><p id="last">Last confirmed save: none this session</p>
+<button id="retry" disabled>Check now</button></section>
+<p class="notice">Test only on disposable local .docx files. Enable automatic server mode once in the setup app. Background operation and automatic restart need verification on your Mac.</p>
+<details id="details"><summary>Live activity and test diagnostics</summary><p id="activity" class="small">Live activity: Starting</p><p id="heartbeat" class="small">Scheduler has not started.</p><pre id="diagnostics">Waiting for Word</pre><p class="small">Counters are for this runtime only. Save completion means Word acknowledged context.sync(); it does not measure physical disk flush.</p></details>
+</main></body></html>
