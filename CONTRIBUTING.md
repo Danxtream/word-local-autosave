@@ -1,6 +1,6 @@
 # Contributing
 
-Local AutoSave is an experimental Word for Mac add-in. Useful contributions improve saving reliability, document the results of live Word tests, or simplify installation without broadening certificate trust.
+Local AutoSave is a personal, experimental Word for Mac add-in developed with AI assistance and shared as-is. You can inspect, build and adapt the code under its license. I am not requesting routine bug reports or feature requests, and I do not promise to review, respond to or merge contributions.
 
 ## Before making changes
 
@@ -28,12 +28,12 @@ The original Python test snapshot assumes a temporary `dev/work` location; path 
 
 Use disposable `.docx` files and the [live test guide](web/help.html). To demonstrate a save, verify the original file's contents on disk while Word is still open. A timer tick, an “Active” status, a mock API response, or choosing Save when closing Word is not equivalent evidence.
 
-For behavior changes, report the Word/macOS versions, the document's local or synced location, pane visibility, interval, and whether Word was foregrounded. Check failure cases as well as successful saves. Automated tests must not modify personal documents or installed trust settings.
+When documenting your own behavior changes, record the Word/macOS versions, the document's local or synced location, pane visibility, interval, and whether Word was foregrounded. Check failure cases as well as successful saves. Automated tests must not modify personal documents or installed trust settings.
 
-## Bug reports and changes
+## Your own changes
 
-Use GitHub Issues if enabled. Include reproduction steps, expected and observed behavior, and relevant errors. Prefer a synthetic example that reproduces the problem. Remove personal paths, document content, and secrets from logs and screenshots.
+Keep your own development notes and tests free of personal documents, secrets and machine-specific details. Forks and local adaptations do not create an obligation for this project to maintain or support them.
 
-Keep changes focused and include applicable test results in the pull request. Describe any new permissions, network destinations, background processes or installation steps. Preserve third-party attribution and avoid committing generated builds, private keys or machine-specific configuration.
+If you choose to submit a change, keep it focused and include applicable test results; review or acceptance is not promised. Describe any new permissions, network destinations, background processes or installation steps. Preserve third-party attribution and avoid committing generated builds, private keys or machine-specific configuration.
 
-Report vulnerabilities using the process in [SECURITY.md](SECURITY.md), rather than posting sensitive details in an ordinary issue.
+Optional security reporting is described in [SECURITY.md](SECURITY.md). No response, investigation or fix is promised.

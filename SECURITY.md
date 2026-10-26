@@ -4,11 +4,11 @@
 
 Local AutoSave v0.1 is experimental. It has not received an independent security audit, and no security response time or long-term maintenance commitment is promised. Use disposable documents until live saving and recovery behavior has been verified for your environment.
 
-## Reporting a vulnerability
+## Optional security reports
 
-If this repository offers **Security → Report a vulnerability**, use that private reporting option. If it is unavailable, open an issue asking the maintainer for a private reporting channel, without exploit details, credentials or private files. No dedicated security email is published here.
+You may report a suspected security vulnerability through **Security → Report a vulnerability**, if that private option is available. No dedicated security email or alternate private reporting channel is published here. Do not put sensitive vulnerability details in a public issue.
 
-Include the affected version or commit, operating system, reproduction conditions, and a synthetic proof of concept where possible. Do not post your documents, certificate private keys or unredacted logs. This document does not assert that private reporting is currently enabled.
+Reporting is optional. I do not promise acknowledgment, investigation, a fix, a response time or continuing maintenance. This is a personal project shared as-is, not a supported product. If you choose to report, use a minimal synthetic example and do not send personal documents, certificate private keys or unredacted logs. This document does not assert that private reporting is currently enabled.
 
 ## Data and trust model
 

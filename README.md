@@ -118,17 +118,21 @@ See [TEST-RESULTS.txt](TEST-RESULTS.txt) and [ENGINEERING-REVIEW.txt](ENGINEERIN
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for development requirements, useful bug reports and the distinction between automated tests and live Word validation. Installation and certificate setup can be improved without changing the saving behavior.
+The source is available for others to inspect, build and adapt. See [CONTRIBUTING.md](CONTRIBUTING.md) for development notes and license terms. I am not requesting routine bug reports or feature requests, and do not promise to review or merge contributions.
 
 ## Security
 
-See [SECURITY.md](SECURITY.md) for the trust model, sensitive files and vulnerability reporting. Do not include documents, certificate private keys or private logs in public reports.
+See [SECURITY.md](SECURITY.md) for the trust model and optional security reporting. I do not promise to acknowledge, investigate or fix reports. Do not post documents, private keys or sensitive vulnerability details publicly.
 
 ## License and project status
 
 Local AutoSave is licensed under the [GNU General Public License, version 3 only](LICENSE) (GPL-3.0-only); see [NOTICE.md](NOTICE.md). Third-party components and Microsoft services retain their own terms.
 
 Local AutoSave is independently developed and is not affiliated with or endorsed by Microsoft. Users need their own licensed Word installation.
+
+## Maintenance and support
+
+This is a personal project developed with AI assistance and shared for others who find it useful. The software is provided as-is. I do not promise technical support, bug fixes, new features or ongoing maintenance. I update it at my discretion, when I consider it worthwhile; there is no release schedule. Donations do not create any entitlement to support or updates.
 
 ## Donate
 
