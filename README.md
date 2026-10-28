@@ -115,7 +115,9 @@ This is a personal project developed with AI assistance and shared for others wh
 
 ## License
 
-Local AutoSave is licensed under the [GNU General Public License, version 3 only](LICENSE) (GPL-3.0-only); see [NOTICE.md](NOTICE.md). Third-party components and Microsoft services retain their own terms.
+Copyright © 2026 Danxtream. Local AutoSave is licensed under the [GNU General Public License, version 3 only](LICENSE) (GPL-3.0-only), with an author-attribution term under section 7(b); see [NOTICE.md](NOTICE.md). Distributed modified versions must remain under these terms and provide corresponding source as required by the GPL.
+
+Third-party components and Microsoft services retain their own terms.
 
 Local AutoSave is independently developed and is not affiliated with or endorsed by Microsoft. Users need their own licensed Word installation.
 

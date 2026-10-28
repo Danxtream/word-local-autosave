@@ -1,3 +1,5 @@
+# Copyright (C) 2026 Danxtream.
+# Licensed under GPL-3.0-only with an additional term under section 7(b); see LICENSE and NOTICE.md.
 """Loopback-only static HTTPS server. No document I/O or upload endpoints."""
 import argparse
 import http.server

@@ -1,3 +1,5 @@
+// Copyright (C) 2026 Danxtream.
+// Licensed under GPL-3.0-only with an additional term under section 7(b); see LICENSE and NOTICE.md.
 import AppKit
 
 final class AppDelegate: NSObject, NSApplicationDelegate {
@@ -10,6 +12,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         let menu = NSMenu()
         let appMenu = NSMenu()
+        appMenu.addItem(withTitle: "About Local AutoSave", action: #selector(NSApplication.orderFrontStandardAboutPanel(_:)), keyEquivalent: "").target = NSApp
+        appMenu.addItem(NSMenuItem.separator())
         appMenu.addItem(withTitle: "Show Local AutoSave", action: #selector(show), keyEquivalent: "0").target = self
         appMenu.addItem(NSMenuItem.separator())
         appMenu.addItem(withTitle: "Quit Local AutoSave Test", action: #selector(quit), keyEquivalent: "q").target = self

@@ -1,3 +1,4 @@
+<!-- Copyright (C) 2026 Danxtream. Licensed under GPL-3.0-only with an additional term under section 7(b); see LICENSE and NOTICE.md. -->
 <svg xmlns="http://www.w3.org/2000/svg" width="174" height="26" viewBox="0 0 174 26" role="img" aria-label="Status: experimental">
   <defs><clipPath id="edge"><rect x=".5" y=".5" width="173" height="25" rx="5"/></clipPath></defs>
   <g clip-path="url(#edge)"><path fill="#30363d" d="M0 0h52v26H0z"/><path fill="#59451f" d="M52 0h122v26H52z"/></g>

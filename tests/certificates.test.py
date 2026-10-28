@@ -1,3 +1,5 @@
+# Copyright (C) 2026 Danxtream.
+# Licensed under GPL-3.0-only with an additional term under section 7(b); see LICENSE and NOTICE.md.
 """Tests use temporary PKI only; no keychain or trust modifications."""
 from pathlib import Path
 import importlib.util

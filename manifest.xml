@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2026 Danxtream. Licensed under GPL-3.0-only with an additional term under section 7(b); see LICENSE and NOTICE.md. -->
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xsi:type="TaskPaneApp">
   <Id>c845bf13-30bf-49a2-bc5a-2d9272796dfa</Id>
   <Version>1.0.0.1</Version><ProviderName>Local AutoSave</ProviderName><DefaultLocale>en-US</DefaultLocale>

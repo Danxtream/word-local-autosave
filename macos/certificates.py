@@ -1,3 +1,5 @@
+# Copyright (C) 2026 Danxtream.
+# Licensed under GPL-3.0-only with an additional term under section 7(b); see LICENSE and NOTICE.md.
 """Local-only TLS lifecycle. No keychain changes except explicit --enable-trust.
 
 Legacy TLS remains untouched until the user approves the one-time CA setup.

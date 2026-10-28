@@ -1,3 +1,5 @@
+// Copyright (C) 2026 Danxtream.
+// Licensed under GPL-3.0-only with an additional term under section 7(b); see LICENSE and NOTICE.md.
 (function (root, factory) {
   if (typeof module === 'object' && module.exports) module.exports = factory;
   else root.makeOfficeHost = factory;

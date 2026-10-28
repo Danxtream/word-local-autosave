@@ -1,3 +1,5 @@
+# Copyright (C) 2026 Danxtream.
+# Licensed under GPL-3.0-only with an additional term under section 7(b); see LICENSE and NOTICE.md.
 """Build the test launcher using Apple's installed command line tools."""
 from pathlib import Path
 import plistlib
@@ -31,12 +33,15 @@ for size in (16,32,80):
 
 shutil.copytree(root/'web', resources/'web', dirs_exist_ok=True)
 shutil.copy2(root/'manifest.xml', resources/'manifest.xml')
+shutil.copy2(root/'LICENSE', resources/'LICENSE')
+shutil.copy2(root/'NOTICE.md', resources/'NOTICE.md')
 shutil.copy2(root/'macos/server.py', resources/'server.py')
 shutil.copy2(root/'macos/manage-watcher.py', resources/'manage-watcher.py')
 shutil.copy2(root/'macos/certificates.py', resources/'certificates.py')
 info = dict(CFBundleExecutable='LocalAutoSaveTest', CFBundleIdentifier='local.autosave.word.test',
             CFBundleName='Local AutoSave Test', CFBundlePackageType='APPL', CFBundleShortVersionString='0.1.0',
-            CFBundleVersion='1', LSMinimumSystemVersion='13.0', NSHighResolutionCapable=True)
+            CFBundleVersion='1', LSMinimumSystemVersion='13.0', NSHighResolutionCapable=True,
+            NSHumanReadableCopyright='© 2026 Danxtream. Free software under GNU GPL version 3 only, with an author-attribution term under section 7(b). You may share and change it under those terms. No warranty. See the installation guide for legal notices and https://www.gnu.org/licenses/gpl-3.0.html for the license.')
 (contents/'Info.plist').write_bytes(plistlib.dumps(info))
 subprocess.run(['xcrun','swiftc','-sdk','/Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk','-target','arm64-apple-macos13.0','-O',str(root/'macos/WordWatcher.swift'),'-o',str(resources/'WordWatcher'),'-framework','AppKit'],check=True)
 subprocess.run(['codesign','--force','--sign','-',str(resources/'WordWatcher')],check=True)

@@ -1,3 +1,5 @@
+# Copyright (C) 2026 Danxtream.
+# Licensed under GPL-3.0-only with an additional term under section 7(b); see LICENSE and NOTICE.md.
 """Install/remove this user's Word lifecycle watcher. Never controls Word itself."""
 import argparse
 import os
