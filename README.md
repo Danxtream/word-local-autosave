@@ -89,15 +89,19 @@ The add-in requests read/write access to the current Word document so it can sav
 
 Certificates and private keys are generated on the user's Mac. Automatic renewal uses user-level trust restricted to SSL for `localhost`. Server certificates last 825 days and renew 30 days early. The approximately 100-year local signing certificate is a personal-use convenience tradeoff: keep its private key private and remove its trust if the key is exposed. Replacing its trust requires approval.
 
-Local AutoSave has not received an independent security audit. More implementation detail is in the [engineering review](ENGINEERING-REVIEW.txt).
+Local AutoSave has not received an independent security audit.
 
 ## Development
 
 The add-in UI and save scheduler are in `web/`. The native launcher, background watcher, local server and certificate code are in `macos/`; `manifest.xml` registers the Word add-in.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for build/test commands. Node.js is needed for the JavaScript tests. The Python test scripts in this snapshot assume a temporary `dev/work` location; path corrections are being reviewed separately.
+Build the launcher with the command in [Installation](#installation). Node.js is needed to run the JavaScript checks:
 
-See [TEST-RESULTS.txt](TEST-RESULTS.txt) and [ENGINEERING-REVIEW.txt](ENGINEERING-REVIEW.txt) for the recorded results and remaining checks.
+```sh
+node --test tests/engine.test.cjs tests/pane.test.cjs
+```
+
+Python checks in `tests/` cover certificates, installation and the watcher. Those scripts currently assume a temporary `dev/work` location; path corrections are being reviewed separately. Use disposable documents and verify the saved file on disk while Word is still open, as described in [Usage](#usage) and the [test guide](web/help.html).
 
 ## Planned features (no timeline)
 

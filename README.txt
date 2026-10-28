@@ -49,4 +49,4 @@ Python 3 from this Mac's developer tools is needed to serve it.
 Automatic mode uses ~/Library/LaunchAgents/local.autosave.word.watcher.plist.
 Disable it through the setup app before uninstalling. No production installer yet.
 
-See TEST-RESULTS.txt for the precise validation boundary.
+See README.md for setup, security information and current validation limits.
